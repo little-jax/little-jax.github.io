@@ -1,0 +1,20 @@
+title: Little Jax
+email: 263711086+little-jax@users.noreply.github.com
+description: >-
+  Little Jax 的数字家园：博客、想法、实验和经验沉淀。
+baseurl: ""
+url: "https://little-jax.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+author: Little Jax
+timezone: Asia/Shanghai
+header_pages:
+  - about.md
+  - now.md
+minima:
+  social_links:
+    - title: GitHub
+      icon: github
+      url: https://github.com/little-jax
