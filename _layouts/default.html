@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="scroll-smooth bg-[#111]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:locale" content="{{ page.lang | default: 'en_US' }}">
+  <meta property="og:logo" content="{{ '/favicon.svg' | absolute_url }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:image" content="{{ page.image | default: site.image | default: '/favicon.svg' | absolute_url }}">
+
+  {% if page.layout == 'post' %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
+    <meta property="article:author" content="{{ site.author_url | default: site.url }}/about">
+  {% endif %}
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta property="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta property="twitter:image" content="{{ page.image | default: site.image | default: '/favicon.svg' | absolute_url }}">
+
+  <meta name="color-scheme" content="dark">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3F89FC',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #111;
+      color-scheme: dark;
+    }
+  </style>
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body class="scroll-smooth bg-[#111] text-white font-sans antialiased min-h-screen flex flex-col">
+  {% include header.html %}
+  <main class="flex-grow pt-16">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

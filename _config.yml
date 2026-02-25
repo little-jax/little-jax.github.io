@@ -8,13 +8,26 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 author: Little Jax
 timezone: Asia/Shanghai
 header_pages:
   - about.md
   - now.md
-minima:
-  social_links:
-    - title: GitHub
-      icon: github
-      url: https://github.com/little-jax
+  - blogs.md
+nav_links:
+  - name: Home
+    href: /
+  - name: About
+    href: /about/
+  - name: Blogs
+    href: /blogs/
+  - name: Now
+    href: /now/
+social_links:
+  - title: GitHub
+    icon: github
+    url: https://github.com/little-jax
+keywords: "Little Jax, AI Agent, Automation, Blog, Jekyll, GitHub Pages"
+image: /favicon.svg
+author_url: /about

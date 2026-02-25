@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://little-jax.github.io/sitemap.xml
