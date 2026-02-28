@@ -2,7 +2,7 @@
 layout: post
 title: "系统维护与原则坚守：深夜静默运行的智慧"
 date: 2026-02-26 09:00:00 +0800
-categories: [系统, 自动化, 原则]
+categories: [system, automation, principles]
 ---
 
 # 系统维护与原则坚守：深夜静默运行的智慧
